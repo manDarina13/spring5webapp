@@ -23,6 +23,7 @@ public class BookController {
 
         model.addAttribute("books", bookRepository.findAll());// añade al modelo el atributo books para que cuando el controlador devuelva el modelo al dispatecher, este
                                                               // le mande el modelo a la vista para que lo utilice
-        return "books";
+        return "books/list";// devuelve el nombre de la vista (o mejor dicho, la ruta donde se encuentra la vista partiendo de la carpeta templates situada resources) a
+                            // la que tiene que invocar el dispatcher.(dicha vista se encuentra en resources>templates>books>list.html)
     }
 }
